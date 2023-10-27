@@ -245,3 +245,51 @@
     font-size: 20px;
     text-decoration: none;
 }
+
+.about {
+    padding: 0 50px 180px;
+    display: grid;
+    grid-template-areas: 
+    "logo title"
+    "logo text";
+    grid-template-rows: 240px 247px;
+    grid-template-columns: 455px 885px;
+}
+
+.about__logo {
+    display: flex;
+    grid-area: logo;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.about__logo-image {
+    width: 100%;
+    max-width: 148px;
+}
+
+.about__title {
+    grid-area: title;
+    font-weight: 700;
+    font-size: 40px;
+    align-self: center;
+    text-transform: uppercase;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    grid-area: text;
+    gap: 25px;
+    font-size: 20px;
+}
+
+.footer {
+    padding: 0 50px 90px;
+}
