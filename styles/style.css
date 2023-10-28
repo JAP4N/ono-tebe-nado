@@ -79,6 +79,9 @@
 
 .contacts_header-position {
     justify-self: end;
+    width: 100%;
+    max-width: 240px;
+    max-height: 97px;
 }
 
 .cover {
