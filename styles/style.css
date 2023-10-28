@@ -20,29 +20,32 @@
     grid-template: 1fr / 1fr 1fr 1fr;
 }
 
-.header__menu {
+.menu {
     justify-self: start;
 }
 
-.header__menu-list {
+.menu-list {
     display: flex;
     gap: 32px;
-    height: 23px;
     list-style: circle;
 }
 
-.header__menu-link {
+.menu-list .menu-items:nth-child(1) {
+    list-style: none;
+}
+
+.menu-link {
     position: relative;
     border-bottom: 1px solid #000;
     font-size: 18px;
     text-decoration: none;
 }
 
-.header__menu-link_border_bottom_none {
+.menu-link_border_bottom_none {
     border: none;
 }
 
-.header__menu-items_marker_none {
+.menu-items_marker_none {
     list-style: none;
 }
 
@@ -75,10 +78,7 @@
     position: relative;
     min-height: 300px;
     padding: 165px 50px 50px;
-    background-image: url("../images/cover.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% auto;
+    background: url("../images/cover.jpg") no-repeat center / 100% auto;
 }
 
 .overlay {
@@ -247,21 +247,21 @@
 }
 
 .about {
-    padding: 0 50px 180px;
     display: grid;
+    grid-template-columns: 455px 885px;
+    grid-template-rows: 240px 247px;
     grid-template-areas: 
     "logo title"
     "logo text";
-    grid-template-rows: 240px 247px;
-    grid-template-columns: 455px 885px;
+    padding: 0 50px 180px;
 }
 
 .about__logo {
     display: flex;
     grid-area: logo;
+    justify-self: center;
     justify-content: center;
     align-items: center;
-    justify-self: center;
     width: 240px;
     height: 240px;
     border-radius: 50%;
@@ -275,21 +275,54 @@
 
 .about__title {
     grid-area: title;
+    align-self: center;
     font-weight: 700;
     font-size: 40px;
-    align-self: center;
     text-transform: uppercase;
 }
 
 .about__text {
     display: flex;
     flex-direction: column;
-    align-self: end;
     grid-area: text;
     gap: 25px;
+    align-self: end;
     font-size: 20px;
 }
 
 .footer {
+    display: flex;
+    justify-content: space-between;
     padding: 0 50px 90px;
+}
+
+.menu-size {
+    width: 100%;
+    max-width: 149px;
+    min-height: 64px;
+}
+
+.menu-list-position {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+}
+
+.footer__social-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 240px;
+    min-height: 48px;
+    list-style: none;
+}
+
+.footer__social-item {
+    width: 48px;
+}
+
+.footer__social-icon {
+    display: block;
+    width: 100%;
 }
