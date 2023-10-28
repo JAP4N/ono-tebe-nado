@@ -70,6 +70,13 @@
     line-height: 1.35;
 }
 
+.contacts__telephone, .contacts__mail {
+    text-decoration: none;
+    width: 100%;
+    max-width: 133px;
+    border-bottom: 1px solid #000;
+}
+
 .contacts_header-position {
     justify-self: end;
 }
@@ -150,7 +157,7 @@
     font-size: 22px;
     line-height: 1.27;
     text-transform: uppercase;
-    word-spacing: 17px;
+    word-spacing: 20px;
     
 }
 
